@@ -5,7 +5,8 @@ import { ZonelistComponent } from './zonelist/zonelist.component';
 const routes: Routes = [
   {
     path: '',
-    component: ZonelistComponent
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
   },
   {
     path: 'dashboard',
