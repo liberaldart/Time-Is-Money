@@ -11,11 +11,13 @@ import { InMemoryLearningDataApi } from './shared/learningDataApiService/in-memo
 import { AppComponent } from './app.component';
 import { TimeIsMoneyRoutingModule } from './app-routing.module';
 import { ZonelistComponent } from './zonelist/zonelist.component';
+import { CheckInToLearnComponent } from './check-in-to-learn/check-in-to-learn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZonelistComponent
+    ZonelistComponent,
+    CheckInToLearnComponent
   ],
   imports: [
     BrowserModule,
