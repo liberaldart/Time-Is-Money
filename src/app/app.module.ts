@@ -5,7 +5,8 @@ import { HttpModule } from '@angular/http';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
-
+import { MockLearningObjectService } from './shared/inMemoryLearningObjectService/MockLearningObjectService.service';
+import { InMemoryLearningDataApi } from './shared/learningDataApiService/in-memory-learning-data-api.service';
 
 import { AppComponent } from './app.component';
 import { TimeIsMoneyRoutingModule } from './app-routing.module';
@@ -20,9 +21,12 @@ import { ZonelistComponent } from './zonelist/zonelist.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    TimeIsMoneyRoutingModule
+    TimeIsMoneyRoutingModule,
+    InMemoryWebApiModule.forRoot(MockLearningObjectService),
   ],
-  providers: [],
+  providers: [
+    InMemoryLearningDataApi
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
